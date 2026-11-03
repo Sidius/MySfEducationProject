@@ -18,3 +18,10 @@ List<Discount_Tier__mdt> tiers = [
 // }
 // cfg.Some_Flag__c = true;
 // upsert cfg;
+
+Discount_Tier__mdt gold = Discount_Tier__mdt.getInstance('Gold');
+System.debug('Gold %: ' + gold.Percent__c);
+
+for (Discount_Tier__mdt t : Discount_Tier__mdt.getAll().values()) {
+    System.debug(t.DeveloperName + ' = ' + t.Percent__c);
+}
