@@ -1,0 +1,1 @@
+Id jobId = System.enqueueJob(new MyQueueable(new Set<Id>{ someId }));
